@@ -1,0 +1,84 @@
+/* ================= CSS — style.css ================= */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #000;
+  font-family: "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
+  touch-action: none;
+}
+
+#scene {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 2;
+}
+
+#glow {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(circle at 50% 52%, rgba(255,196,84,0.20) 0%, rgba(255,150,40,0.09) 26%, rgba(0,0,0,0) 58%),
+    radial-gradient(circle at 12% 18%, rgba(255,178,66,0.16) 0%, rgba(0,0,0,0) 42%),
+    radial-gradient(circle at 88% 22%, rgba(255,212,120,0.14) 0%, rgba(0,0,0,0) 44%),
+    radial-gradient(circle at 18% 88%, rgba(255,160,40,0.15) 0%, rgba(0,0,0,0) 46%),
+    radial-gradient(circle at 84% 86%, rgba(255,190,90,0.15) 0%, rgba(0,0,0,0) 46%),
+    #000;
+  animation: breathe 9s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  0%, 100% { opacity: 0.85; }
+  50%      { opacity: 1; }
+}
+
+#vignette {
+  position: fixed;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0) 42%, rgba(0,0,0,0.55) 78%, rgba(0,0,0,0.92) 100%);
+}
+
+#hint {
+  position: fixed;
+  bottom: 22px;
+  left: 0;
+  width: 100%;
+  z-index: 4;
+  text-align: center;
+  font-size: 13px;
+  letter-spacing: 1.4px;
+  color: rgba(255, 214, 140, 0.75);
+  text-shadow: 0 0 14px rgba(255, 170, 50, 0.85);
+  opacity: 0;
+  transition: opacity 1.4s ease;
+  pointer-events: none;
+}
+#hint.show { opacity: 1; }
+
+#loader {
+  position: fixed;
+  inset: 0;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 210, 130, 0.9);
+  letter-spacing: 3px;
+  font-size: 14px;
+  text-shadow: 0 0 18px rgba(255,160,40,0.9);
+  background: #000;
+  transition: opacity 0.9s ease;
+}
+#loader.hide { opacity: 0; pointer-events: none; }
+
+@media (max-width: 600px) {
+  #hint { font-size: 11px; bottom: 16px; }
+}
