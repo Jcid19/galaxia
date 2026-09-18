@@ -212,10 +212,10 @@ heartGroup.add(mainLbl);
 /* ---------- Ramos en los anillos (nada en el centro) ---------- */
 const DATA = [
   ['💐','Mi Amor '], ['🌻','Eres mi sol '], ['💐','Te adoro '],
-  ['🌻','Eres preciosa '], ['💐','Siempre juntos '], ['🌻','Me encantas '],
+  ['🌻','Eres preciosa '], ['💐','Mi princesa '], ['🌻','Me encantas '],
   ['🌻','Eres mi todo 🌻'],
-  ['💐','Mi calabazita '], ['🌻',' Me encantas '], ['🌼','Mi Vida '],
-  ['🌻','Te Quiero '], ['💐','Mi cielo '], ['🌹','Mi princesa '], ['🌻','Mi todo ']
+  ['🌼','Mi calabazita '], ['🌻',' Me encantas '], ['🌼','Mi Vida '],
+  ['🌻','Te Quiero '], ['🌼','Mi cielo '], ['🌻','La mejor diseñadora']
 ];
 const flowers = [];
 DATA.forEach((d, i) => {
