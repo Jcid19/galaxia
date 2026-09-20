@@ -201,7 +201,7 @@ const hMat = new THREE.PointsMaterial({
 });
 heartGroup.add(new THREE.Points(hg, hMat));
 
-const ml = labelTex('Te Quiero Muchoo 🤍🌻', 96);
+const ml = labelTex('Te Quiero Mucho💗🌻', 96);
 const mainLbl = new THREE.Sprite(new THREE.SpriteMaterial({
   map: ml.texture, transparent: true, depthWrite: false, depthTest: false
 }));
@@ -213,7 +213,7 @@ heartGroup.add(mainLbl);
 const DATA = [
   ['💐','Mi Amor '], ['🌻','Eres mi sol '], ['💐','Te adoro '],
   ['🌻','Eres preciosa '], ['💐','Mi princesa '], ['🌻','Me encantas '],
-  ['🌻','Eres mi todo 🌻'],
+  ['🌼','Eres mi todo 🌻'],
   ['🌼','Mi calabazita '], ['🌻',' Me encantas '], ['🌼','Mi Vida '],
   ['🌻','Te Quiero '], ['🌼','Mi cielo '], ['🌻','La mejor diseñadora']
 ];
